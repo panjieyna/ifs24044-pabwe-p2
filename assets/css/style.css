@@ -9,10 +9,10 @@
   --color-surface: #ffffff;
   --color-primary: #1b2a4a;      /* deep navy */
   --color-primary-light: #2f4570;
-  --color-accent: #3ddc97;       /* mint green */
-  --color-accent-dark: #23b578;
+  --color-accent: #3ddc97;       /* mint green (untuk background/icon) */
+  --color-accent-dark: #157a50;  /* lebih gelap agar kontras teks ≥ 4.5:1 */
   --color-text: #1a1d29;
-  --color-muted: #5b6072;
+  --color-muted: #495057;        /* lebih gelap untuk kontras meta text */
   --color-border: #e4e7ef;
 
   --font-heading: "Space Grotesk", "Segoe UI", sans-serif;
@@ -307,7 +307,7 @@ h1, h2, h3, h4 {
 
 .hero-stats div span {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75); /* kontras ≥ 4.5:1 terhadap navy */
 }
 
 .hero-visual {
@@ -499,7 +499,7 @@ h1, h2, h3, h4 {
 }
 
 .contact-info span {
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.78); /* kontras ≥ 4.5:1 terhadap navy */
   font-size: 0.92rem;
 }
 
@@ -570,7 +570,7 @@ h1, h2, h3, h4 {
   margin-top: 10px;
   max-width: 320px;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.78); /* kontras ≥ 4.5:1 terhadap #10182c */
 }
 
 .footer-links {
@@ -579,10 +579,12 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
 }
 
+.footer-col h2.footer-heading,
 .footer-col h4 {
   color: var(--color-surface);
   font-size: 0.95rem;
   margin-bottom: 14px;
+  font-weight: 600;
 }
 
 .footer-col ul {
@@ -602,7 +604,7 @@ h1, h2, h3, h4 {
   gap: 12px;
   padding-top: 20px;
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.72); /* kontras ≥ 4.5:1 terhadap #10182c */
 }
 
 /* ---------- 10. Responsive ---------- */

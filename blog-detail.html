@@ -32,7 +32,7 @@
       color: var(--nx-navy);
       margin: 28px 0;
     }
-    .meta-icon { color: #6c757d; font-size: .9rem; }
+    .meta-icon { color: #495057; font-size: .9rem; } /* kontras ≥ 4.5:1 */
     .related-card { border: none; border-radius: 12px; box-shadow: 0 4px 14px rgba(27,42,74,.06); transition: transform .18s ease; }
     .related-card:hover { transform: translateY(-4px); }
     .comment-box textarea { resize: none; }
@@ -41,9 +41,12 @@
       background: var(--nx-navy); color: #fff; display: flex;
       align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;
     }
-    footer { background: #10182c; color: rgba(255,255,255,.7); }
-    footer a { color: rgba(255,255,255,.75); text-decoration: none; }
+    footer { background: #10182c; color: rgba(255,255,255,.75); }
+    footer a { color: rgba(255,255,255,.8); text-decoration: none; }
     footer a:hover { color: var(--nx-mint); }
+    /* Override warna link & text-muted Bootstrap agar kontras ≥ 4.5:1 */
+    .breadcrumb-item a { color: #0a58ca; }
+    .text-muted { color: #495057 !important; }
   </style>
 </head>
 <body>
@@ -79,7 +82,7 @@
 
     <!-- ============ COVER ARTIKEL ============ -->
     <div class="article-body mb-4">
-      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="Ilustrasi jaringan neural pada Large Language Model" class="cover-full">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="Ilustrasi jaringan neural pada Large Language Model" class="cover-full" width="1200" height="420" decoding="async">
     </div>
 
     <article class="article-body">
@@ -157,7 +160,7 @@
           <div class="card related-card h-100">
             <div class="card-body">
               <span class="badge rounded-pill mb-2" style="background: rgba(61,220,151,.15); color: var(--nx-navy);"><i class="bi bi-chat-dots me-1"></i>Tools &amp; Praktik</span>
-              <h4 class="h6 fw-bold"><a href="blog.html" class="text-dark text-decoration-none">5 Teknik Prompt Engineering untuk Hasil AI yang Lebih Akurat</a></h4>
+              <p class="h6 fw-bold mb-1"><a href="blog.html" class="text-dark text-decoration-none">5 Teknik Prompt Engineering untuk Hasil AI yang Lebih Akurat</a></p>
               <p class="small text-muted mb-0">Fajar Nugroho &middot; 05 Sep 2026</p>
             </div>
           </div>
@@ -166,7 +169,7 @@
           <div class="card related-card h-100">
             <div class="card-body">
               <span class="badge rounded-pill mb-2" style="background: rgba(61,220,151,.15); color: var(--nx-navy);"><i class="bi bi-shield-check me-1"></i>Etika AI</span>
-              <h4 class="h6 fw-bold"><a href="blog.html" class="text-dark text-decoration-none">Mengapa Etika AI Penting bagi Perusahaan yang Mengadopsi Otomasi</a></h4>
+              <p class="h6 fw-bold mb-1"><a href="blog.html" class="text-dark text-decoration-none">Mengapa Etika AI Penting bagi Perusahaan yang Mengadopsi Otomasi</a></p>
               <p class="small text-muted mb-0">Adit Pratama &middot; 20 Agu 2026</p>
             </div>
           </div>
@@ -218,7 +221,7 @@
           <p class="small mt-2 mb-0">Solusi kecerdasan buatan yang membantu bisnis Anda bekerja lebih cerdas dan efisien.</p>
         </div>
         <div class="col-6 col-md-4">
-          <h4 class="h6 text-white mb-3">Halaman</h4>
+          <h2 class="h6 text-white mb-3">Halaman</h2>
           <ul class="list-unstyled small">
             <li class="mb-2"><a href="index.html">Landing Page</a></li>
             <li class="mb-2"><a href="blog.html">Blog AI</a></li>
@@ -226,7 +229,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-4">
-          <h4 class="h6 text-white mb-3">Kontak</h4>
+          <h2 class="h6 text-white mb-3">Kontak</h2>
           <ul class="list-unstyled small">
             <li class="mb-2"><i class="bi bi-envelope me-1"></i> halo@nexamind.ai</li>
             <li><i class="bi bi-telephone me-1"></i> +62 812-3456-7890</li>

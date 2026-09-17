@@ -35,12 +35,17 @@
     .card-blog:hover { transform: translateY(-6px); box-shadow: 0 16px 30px rgba(27,42,74,.14); }
     .card-blog img { height: 190px; object-fit: cover; }
     .badge-topic { background: rgba(61,220,151,.15); color: #1b2a4a; font-weight: 600; }
-    .meta-icon { color: #6c757d; font-size: .85rem; }
+    .meta-icon { color: #495057; font-size: .85rem; } /* kontras ≥ 4.5:1 */
     .filter-pill { border: 1px solid #dee2e6; border-radius: 999px; padding: 6px 16px; font-size: .85rem; color: #495057; }
     .filter-pill.active { background: var(--nx-navy); color: #fff; border-color: var(--nx-navy); }
-    footer { background: #10182c; color: rgba(255,255,255,.7); }
-    footer a { color: rgba(255,255,255,.75); text-decoration: none; }
+    footer { background: #10182c; color: rgba(255,255,255,.75); }
+    footer a { color: rgba(255,255,255,.8); text-decoration: none; }
     footer a:hover { color: var(--nx-mint); }
+    /* Override Bootstrap link color agar kontras cukup di background terang */
+    a:not(.navbar-brand):not(.nav-link):not(.page-link):not(.btn) { color: #0a58ca; }
+    .breadcrumb-item a { color: #0a58ca; }
+    /* Override text-muted Bootstrap (#6c757d) agar kontras ≥ 4.5:1 */
+    .text-muted { color: #495057 !important; }
   </style>
 </head>
 <body>
@@ -93,10 +98,10 @@
       <!-- Artikel 1 -->
       <div class="col-md-6 col-lg-3">
         <article class="card card-blog h-100">
-          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Ilustrasi jaringan neural yang merepresentasikan Large Language Model">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop" class="card-img-top" width="600" height="190" loading="lazy" decoding="async" alt="Ilustrasi jaringan neural yang merepresentasikan Large Language Model">
           <div class="card-body d-flex flex-column">
             <span class="badge badge-topic rounded-pill mb-2 align-self-start"><i class="bi bi-cpu me-1"></i>Generative AI</span>
-            <h3 class="h6 fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">Mengenal Large Language Model (LLM) dan Cara Kerjanya</a></h3>
+            <h2 class="h6 fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">Mengenal Large Language Model (LLM) dan Cara Kerjanya</a></h2>
             <p class="text-muted small mb-3">Memahami dasar arsitektur transformer dan bagaimana LLM belajar memprediksi teks secara kontekstual.</p>
             <div class="mt-auto d-flex flex-wrap gap-3 small meta-icon">
               <span><i class="bi bi-person"></i> Dinda Rahma</span>
@@ -110,10 +115,10 @@
       <!-- Artikel 2 -->
       <div class="col-md-6 col-lg-3">
         <article class="card card-blog h-100">
-          <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Ilustrasi kode dan data yang merepresentasikan prompt engineering">
+          <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=600&auto=format&fit=crop" class="card-img-top" width="600" height="190" loading="lazy" decoding="async" alt="Ilustrasi kode dan data yang merepresentasikan prompt engineering">
           <div class="card-body d-flex flex-column">
             <span class="badge badge-topic rounded-pill mb-2 align-self-start"><i class="bi bi-chat-dots me-1"></i>Tools &amp; Praktik</span>
-            <h3 class="h6 fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">5 Teknik Prompt Engineering untuk Hasil AI yang Lebih Akurat</a></h3>
+            <h2 class="h6 fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">5 Teknik Prompt Engineering untuk Hasil AI yang Lebih Akurat</a></h2>
             <p class="text-muted small mb-3">Panduan praktis menyusun instruksi agar model AI menghasilkan jawaban yang relevan dan konsisten.</p>
             <div class="mt-auto d-flex flex-wrap gap-3 small meta-icon">
               <span><i class="bi bi-person"></i> Fajar Nugroho</span>
@@ -127,10 +132,10 @@
       <!-- Artikel 3 -->
       <div class="col-md-6 col-lg-3">
         <article class="card card-blog h-100">
-          <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Ilustrasi kamera computer vision mendeteksi objek">
+          <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600&auto=format&fit=crop" class="card-img-top" width="600" height="190" loading="lazy" decoding="async" alt="Ilustrasi kamera computer vision mendeteksi objek">
           <div class="card-body d-flex flex-column">
             <span class="badge badge-topic rounded-pill mb-2 align-self-start"><i class="bi bi-camera me-1"></i>Machine Learning</span>
-            <h3 class="h6 fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">Penerapan Computer Vision dalam Inspeksi Kualitas Pabrik</a></h3>
+            <h2 class="h6 fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">Penerapan Computer Vision dalam Inspeksi Kualitas Pabrik</a></h2>
             <p class="text-muted small mb-3">Bagaimana model deteksi objek membantu mengidentifikasi cacat produk secara real-time di lini produksi.</p>
             <div class="mt-auto d-flex flex-wrap gap-3 small meta-icon">
               <span><i class="bi bi-person"></i> Wulan Sari</span>
@@ -144,10 +149,10 @@
       <!-- Artikel 4 -->
       <div class="col-md-6 col-lg-3">
         <article class="card card-blog h-100">
-          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Diskusi tim tentang etika penggunaan kecerdasan buatan">
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop" class="card-img-top" width="600" height="190" loading="lazy" decoding="async" alt="Diskusi tim tentang etika penggunaan kecerdasan buatan">
           <div class="card-body d-flex flex-column">
             <span class="badge badge-topic rounded-pill mb-2 align-self-start"><i class="bi bi-shield-check me-1"></i>Etika AI</span>
-            <h3 class="h6 fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">Mengapa Etika AI Penting bagi Perusahaan yang Mengadopsi Otomasi</a></h3>
+            <h2 class="h6 fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">Mengapa Etika AI Penting bagi Perusahaan yang Mengadopsi Otomasi</a></h2>
             <p class="text-muted small mb-3">Prinsip transparansi, privasi data, dan akuntabilitas yang perlu diperhatikan saat menerapkan AI di bisnis.</p>
             <div class="mt-auto d-flex flex-wrap gap-3 small meta-icon">
               <span><i class="bi bi-person"></i> Adit Pratama</span>
@@ -163,11 +168,11 @@
     <!-- ============ PAGINATION (opsional) ============ -->
     <nav class="mt-5" aria-label="Navigasi halaman blog">
       <ul class="pagination justify-content-center">
-        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="bi bi-chevron-left"></i></a></li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-label="Halaman sebelumnya"><i class="bi bi-chevron-left" aria-hidden="true"></i></a></li>
+        <li class="page-item active"><a class="page-link" href="#" aria-current="page">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
         <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+        <li class="page-item"><a class="page-link" href="#" aria-label="Halaman berikutnya"><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
   </main>
@@ -183,7 +188,7 @@
           <p class="small mt-2 mb-0">Solusi kecerdasan buatan yang membantu bisnis Anda bekerja lebih cerdas dan efisien.</p>
         </div>
         <div class="col-6 col-md-4">
-          <h4 class="h6 text-white mb-3">Halaman</h4>
+          <h2 class="h6 text-white mb-3">Halaman</h2>
           <ul class="list-unstyled small">
             <li class="mb-2"><a href="index.html">Landing Page</a></li>
             <li class="mb-2"><a href="blog.html">Blog AI</a></li>
@@ -191,7 +196,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-4">
-          <h4 class="h6 text-white mb-3">Kontak</h4>
+          <h2 class="h6 text-white mb-3">Kontak</h2>
           <ul class="list-unstyled small">
             <li class="mb-2"><i class="bi bi-envelope me-1"></i> halo@nexamind.ai</li>
             <li><i class="bi bi-telephone me-1"></i> +62 812-3456-7890</li>
