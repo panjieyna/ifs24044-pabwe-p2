@@ -26,6 +26,16 @@
 
   body { font-family: var(--font-body); }
   h1, h2, h3, .brand-font { font-family: var(--font-heading); }
+  /* Touch target ≥ 44×44px (tidak bergantung proses Tailwind CDN) */
+  .nav-touch {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
 </style>
 </head>
 <body class="bg-nx-bg text-slate-800">
@@ -33,14 +43,14 @@
   <!-- ============ NAVBAR ============ -->
   <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="brand-font inline-flex items-center gap-2 font-bold text-lg text-nx-navy min-h-11 py-1">
+      <a href="index.html" class="brand-font nav-touch gap-2 font-bold text-lg text-nx-navy">
         <span class="w-9 h-9 rounded-lg bg-gradient-to-br from-nx-navy to-nx-mint text-white flex items-center justify-center shrink-0">N</span>
         NexaMind AI
       </a>
       <div class="flex items-center gap-2 text-sm font-medium text-slate-600">
-        <a href="index.html" class="inline-flex items-center min-h-11 px-3 py-2 rounded-lg hover:text-nx-navy hover:bg-slate-100 transition">Landing Page</a>
-        <a href="blog.html" class="inline-flex items-center min-h-11 px-3 py-2 rounded-lg hover:text-nx-navy hover:bg-slate-100 transition">Blog</a>
-        <a href="cv.html" class="inline-flex items-center min-h-11 px-3 py-2 rounded-lg text-nx-navy font-semibold bg-slate-100">CV</a>
+        <a href="index.html" class="nav-touch hover:text-nx-navy hover:bg-slate-100 transition">Landing Page</a>
+        <a href="blog.html" class="nav-touch hover:text-nx-navy hover:bg-slate-100 transition">Blog</a>
+        <a href="cv.html" class="nav-touch text-nx-navy font-semibold bg-slate-100">CV</a>
       </div>
     </div>
   </nav>
@@ -52,7 +62,7 @@
       <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?q=80&w=300&h=300&fit=crop&auto=format"
            alt="Foto profil mahasiswa"
            class="w-32 h-32 md:w-36 md:h-36 rounded-2xl object-cover ring-4 ring-white/10 shrink-0"
-           width="300" height="300" loading="lazy" decoding="async" />
+           width="300" height="300" decoding="async" fetchpriority="high" />
 
       <div class="text-center md:text-left">
         <h1 class="text-3xl md:text-4xl font-bold mb-1">Ahmad Fauzan Ramadhan</h1>
