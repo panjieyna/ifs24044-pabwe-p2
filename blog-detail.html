@@ -42,10 +42,12 @@
       align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;
     }
     footer { background: #10182c; color: rgba(255,255,255,.75); }
-    footer a { color: rgba(255,255,255,.8); text-decoration: none; }
-    footer a:hover { color: var(--nx-mint); }
-    /* Override warna link & text-muted Bootstrap agar kontras ≥ 4.5:1 */
+    /* Link di konten terang; footer tetap terang agar kontras ≥ 4.5:1 */
+    main a:not(.nav-link):not(.page-link):not(.btn),
     .breadcrumb-item a { color: #0a58ca; }
+    footer a { color: rgba(255,255,255,.85); text-decoration: none; }
+    footer a:hover { color: var(--nx-mint); }
+    /* Override text-muted Bootstrap (#6c757d) agar kontras ≥ 4.5:1 */
     .text-muted { color: #495057 !important; }
   </style>
 </head>

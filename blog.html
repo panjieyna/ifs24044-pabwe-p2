@@ -39,11 +39,12 @@
     .filter-pill { border: 1px solid #dee2e6; border-radius: 999px; padding: 6px 16px; font-size: .85rem; color: #495057; }
     .filter-pill.active { background: var(--nx-navy); color: #fff; border-color: var(--nx-navy); }
     footer { background: #10182c; color: rgba(255,255,255,.75); }
-    footer a { color: rgba(255,255,255,.8); text-decoration: none; }
-    footer a:hover { color: var(--nx-mint); }
-    /* Override Bootstrap link color agar kontras cukup di background terang */
-    a:not(.navbar-brand):not(.nav-link):not(.page-link):not(.btn) { color: #0a58ca; }
+    /* Link di konten terang (bukan footer) agar kontras ≥ 4.5:1 */
+    main a:not(.nav-link):not(.page-link):not(.btn),
     .breadcrumb-item a { color: #0a58ca; }
+    /* Footer link tetap terang di latar gelap */
+    footer a { color: rgba(255,255,255,.85); text-decoration: none; }
+    footer a:hover { color: var(--nx-mint); }
     /* Override text-muted Bootstrap (#6c757d) agar kontras ≥ 4.5:1 */
     .text-muted { color: #495057 !important; }
   </style>
