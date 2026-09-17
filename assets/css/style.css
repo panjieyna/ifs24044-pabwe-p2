@@ -1,3 +1,8 @@
+/* =========================================================
+   NexaMind AI — Landing Page Stylesheet
+   Pure CSS (no framework) — CSS Variables, Flexbox, Grid
+   ========================================================= */
+
 /* ---------- 1. Design tokens ---------- */
 :root {
   --color-bg: #f7f8fb;
