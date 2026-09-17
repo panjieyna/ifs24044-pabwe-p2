@@ -6,6 +6,8 @@
 <title>Curriculum Vitae — Mahasiswa PABWE</title>
 <meta name="description" content="CV digital dibangun dengan Tailwind CSS 4, menampilkan pengalaman dan proyek terkait pengembangan web dan AI." />
 
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <!-- Tailwind CSS 4 (Play CDN untuk praktikum) -->
@@ -31,14 +33,14 @@
   <!-- ============ NAVBAR ============ -->
   <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="brand-font flex items-center gap-2 font-bold text-lg text-nx-navy">
-        <span class="w-9 h-9 rounded-lg bg-gradient-to-br from-nx-navy to-nx-mint text-white flex items-center justify-center">N</span>
+      <a href="index.html" class="brand-font inline-flex items-center gap-2 font-bold text-lg text-nx-navy min-h-11 py-1">
+        <span class="w-9 h-9 rounded-lg bg-gradient-to-br from-nx-navy to-nx-mint text-white flex items-center justify-center shrink-0">N</span>
         NexaMind AI
       </a>
-      <div class="flex items-center gap-6 text-sm font-medium text-slate-600">
-        <a href="index.html" class="hover:text-nx-navy transition">Landing Page</a>
-        <a href="blog.html" class="hover:text-nx-navy transition">Blog</a>
-        <a href="cv.html" class="text-nx-navy font-semibold">CV</a>
+      <div class="flex items-center gap-2 text-sm font-medium text-slate-600">
+        <a href="index.html" class="inline-flex items-center min-h-11 px-3 py-2 rounded-lg hover:text-nx-navy hover:bg-slate-100 transition">Landing Page</a>
+        <a href="blog.html" class="inline-flex items-center min-h-11 px-3 py-2 rounded-lg hover:text-nx-navy hover:bg-slate-100 transition">Blog</a>
+        <a href="cv.html" class="inline-flex items-center min-h-11 px-3 py-2 rounded-lg text-nx-navy font-semibold bg-slate-100">CV</a>
       </div>
     </div>
   </nav>
@@ -47,9 +49,10 @@
 
     <!-- ============ HEADER PROFIL ============ -->
     <header class="bg-nx-navy text-white rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start gap-8 mb-10">
-      <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?q=80&w=300&auto=format&fit=crop"
+      <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?q=80&w=300&h=300&fit=crop&auto=format"
            alt="Foto profil mahasiswa"
-           class="w-32 h-32 md:w-36 md:h-36 rounded-2xl object-cover ring-4 ring-white/10 shrink-0" width="144" height="144" loading="lazy" decoding="async" />
+           class="w-32 h-32 md:w-36 md:h-36 rounded-2xl object-cover ring-4 ring-white/10 shrink-0"
+           width="300" height="300" loading="lazy" decoding="async" />
 
       <div class="text-center md:text-left">
         <h1 class="text-3xl md:text-4xl font-bold mb-1">Ahmad Fauzan Ramadhan</h1>
