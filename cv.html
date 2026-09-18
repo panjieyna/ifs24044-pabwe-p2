@@ -26,31 +26,42 @@
 
   body { font-family: var(--font-body); }
   h1, h2, h3, .brand-font { font-family: var(--font-heading); }
-  /* Touch target ≥ 44×44px (tidak bergantung proses Tailwind CDN) */
+</style>
+
+<!-- CSS biasa (bukan type text/tailwindcss) agar pasti ter-apply -->
+<style>
+  /* Touch target ≥ 48×48px — rekomendasi Lighthouse Best Practices */
   .nav-touch {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    min-width: 44px;
-    padding: 8px 12px;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;
+    min-height: 48px !important;
+    min-width: 48px !important;
+    padding: 12px 14px !important;
     border-radius: 8px;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
+    line-height: 1.2;
+  }
+  nav .nav-links-row {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* jarak antar target ≥ 8px */
   }
 </style>
 </head>
 <body class="bg-nx-bg text-slate-800">
 
   <!-- ============ NAVBAR ============ -->
-  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="brand-font nav-touch gap-2 font-bold text-lg text-nx-navy">
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200" aria-label="Navigasi utama">
+    <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="brand-font nav-touch gap-2 font-bold text-lg text-nx-navy" style="min-height:48px;min-width:48px;padding:12px 14px;display:inline-flex;align-items:center;box-sizing:border-box;">
         <span class="w-9 h-9 rounded-lg bg-gradient-to-br from-nx-navy to-nx-mint text-white flex items-center justify-center shrink-0">N</span>
         NexaMind AI
       </a>
-      <div class="flex items-center gap-2 text-sm font-medium text-slate-600">
-        <a href="index.html" class="nav-touch hover:text-nx-navy hover:bg-slate-100 transition">Landing Page</a>
-        <a href="blog.html" class="nav-touch hover:text-nx-navy hover:bg-slate-100 transition">Blog</a>
-        <a href="cv.html" class="nav-touch text-nx-navy font-semibold bg-slate-100">CV</a>
+      <div class="nav-links-row text-sm font-medium text-slate-600">
+        <a href="index.html" class="nav-touch hover:text-nx-navy hover:bg-slate-100 transition" style="min-height:48px;min-width:48px;padding:12px 14px;display:inline-flex;align-items:center;box-sizing:border-box;">Landing Page</a>
+        <a href="blog.html" class="nav-touch hover:text-nx-navy hover:bg-slate-100 transition" style="min-height:48px;min-width:48px;padding:12px 14px;display:inline-flex;align-items:center;box-sizing:border-box;">Blog</a>
+        <a href="cv.html" class="nav-touch text-nx-navy font-semibold bg-slate-100" style="min-height:48px;min-width:48px;padding:12px 14px;display:inline-flex;align-items:center;box-sizing:border-box;">CV</a>
       </div>
     </div>
   </nav>
