@@ -47,16 +47,21 @@
     .breadcrumb-item a { color: #0a58ca; }
     footer a { color: rgba(255,255,255,.85); text-decoration: none; }
     footer a:hover { color: var(--nx-mint); }
-    /* Override tipis Bootstrap */
+    /* Override text-muted Bootstrap (#6c757d) agar kontras ≥ 4.5:1 */
     .text-muted { color: #495057 !important; }
+    /* Touch target ≥ 48px */
     .navbar .nav-link {
-      display: inline-flex; align-items: center;
-      min-height: 48px; padding: 12px 14px !important;
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 12px 14px !important;
+      box-sizing: border-box;
     }
-    .navbar-brand { min-height: 48px; display: inline-flex !important; align-items: center; }
-    .badge-topic-ai { background: rgba(61,220,151,.15); color: var(--nx-navy); }
-    .btn-nx-navy { background: var(--nx-navy); color: #fff; }
-    .btn-nx-navy:hover { background: #2f4570; color: #fff; }
+    .navbar-brand {
+      min-height: 48px;
+      display: inline-flex !important;
+      align-items: center;
+    }
   </style>
 </head>
 <body>
@@ -98,7 +103,7 @@
     <article class="article-body">
       <!-- ============ HEADER ARTIKEL: judul + meta info ============ -->
       <header class="mb-4">
-        <span class="badge rounded-pill mb-3 badge-topic-ai">
+        <span class="badge rounded-pill mb-3" style="background: rgba(61,220,151,.15); color: var(--nx-navy);">
           <i class="bi bi-cpu me-1"></i>Generative AI
         </span>
 
@@ -169,7 +174,7 @@
         <div class="col-md-6">
           <div class="card related-card h-100">
             <div class="card-body">
-              <span class="badge rounded-pill mb-2 badge-topic-ai"><i class="bi bi-chat-dots me-1"></i>Tools &amp; Praktik</span>
+              <span class="badge rounded-pill mb-2" style="background: rgba(61,220,151,.15); color: var(--nx-navy);"><i class="bi bi-chat-dots me-1"></i>Tools &amp; Praktik</span>
               <p class="h6 fw-bold mb-1"><a href="blog.html" class="text-dark text-decoration-none">5 Teknik Prompt Engineering untuk Hasil AI yang Lebih Akurat</a></p>
               <p class="small text-muted mb-0">Fajar Nugroho &middot; 05 Sep 2026</p>
             </div>
@@ -178,7 +183,7 @@
         <div class="col-md-6">
           <div class="card related-card h-100">
             <div class="card-body">
-              <span class="badge rounded-pill mb-2 badge-topic-ai"><i class="bi bi-shield-check me-1"></i>Etika AI</span>
+              <span class="badge rounded-pill mb-2" style="background: rgba(61,220,151,.15); color: var(--nx-navy);"><i class="bi bi-shield-check me-1"></i>Etika AI</span>
               <p class="h6 fw-bold mb-1"><a href="blog.html" class="text-dark text-decoration-none">Mengapa Etika AI Penting bagi Perusahaan yang Mengadopsi Otomasi</a></p>
               <p class="small text-muted mb-0">Adit Pratama &middot; 20 Agu 2026</p>
             </div>
@@ -212,7 +217,7 @@
         <div class="avatar-circle"><i class="bi bi-person"></i></div>
         <form class="flex-grow-1" action="#" method="post">
           <textarea class="form-control mb-2" rows="3" placeholder="Tulis komentar Anda..." required></textarea>
-          <button type="submit" class="btn btn-sm text-white btn-nx-navy">
+          <button type="submit" class="btn btn-sm text-white" style="background: var(--nx-navy);">
             <i class="bi bi-send me-1"></i> Kirim Komentar
           </button>
         </form>
