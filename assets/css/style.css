@@ -685,3 +685,24 @@ h1, h2, h3, h4 {
     gap: 32px;
   }
 }
+
+/* ---------- 11. Utility replacements for inline styles ---------- */
+.bar-fill-96 { width: 96%; }
+.bar-fill-82 { width: 82%; }
+.bar-fill-65 { width: 65%; }
+
+.text-muted-custom {
+  color: var(--color-muted);
+}
+
+.contact .section-tag {
+  color: var(--color-accent);
+}
+
+.contact .section-head h2 {
+  color: #fff;
+}
+
+.site-footer .brand {
+  color: #fff;
+}
