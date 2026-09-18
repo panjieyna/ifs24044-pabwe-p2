@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-<!-- Tailwind CSS 4 (Play CDN untuk praktikum) -->
-<script src="https://cdn.tailwindcss.com/@tailwindcss/browser@4"></script>
+<!-- Tailwind CSS 4 — CDN resmi via jsDelivr -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 <style type="text/tailwindcss">
   @theme {
@@ -27,41 +27,20 @@
   body { font-family: var(--font-body); }
   h1, h2, h3, .brand-font { font-family: var(--font-heading); }
 </style>
-
-<!-- CSS biasa (bukan type text/tailwindcss) agar pasti ter-apply -->
-<style>
-  /* Touch target ≥ 48×48px — rekomendasi Lighthouse Best Practices */
-  .nav-touch {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center;
-    min-height: 48px !important;
-    min-width: 48px !important;
-    padding: 12px 14px !important;
-    border-radius: 8px;
-    box-sizing: border-box !important;
-    line-height: 1.2;
-  }
-  nav .nav-links-row {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* jarak antar target ≥ 8px */
-  }
-</style>
 </head>
 <body class="bg-nx-bg text-slate-800">
 
   <!-- ============ NAVBAR ============ -->
   <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200" aria-label="Navigasi utama">
     <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
-      <a href="index.html" class="brand-font nav-touch gap-2 font-bold text-lg text-nx-navy" style="min-height:48px;min-width:48px;padding:12px 14px;display:inline-flex;align-items:center;box-sizing:border-box;">
+      <a href="index.html" class="brand-font inline-flex items-center gap-2 min-h-12 px-3.5 py-3 font-bold text-lg text-nx-navy rounded-lg">
         <span class="w-9 h-9 rounded-lg bg-gradient-to-br from-nx-navy to-nx-mint text-white flex items-center justify-center shrink-0">N</span>
         NexaMind AI
       </a>
-      <div class="nav-links-row text-sm font-medium text-slate-600">
-        <a href="index.html" class="nav-touch hover:text-nx-navy hover:bg-slate-100 transition" style="min-height:48px;min-width:48px;padding:12px 14px;display:inline-flex;align-items:center;box-sizing:border-box;">Landing Page</a>
-        <a href="blog.html" class="nav-touch hover:text-nx-navy hover:bg-slate-100 transition" style="min-height:48px;min-width:48px;padding:12px 14px;display:inline-flex;align-items:center;box-sizing:border-box;">Blog</a>
-        <a href="cv.html" class="nav-touch text-nx-navy font-semibold bg-slate-100" style="min-height:48px;min-width:48px;padding:12px 14px;display:inline-flex;align-items:center;box-sizing:border-box;">CV</a>
+      <div class="flex items-center gap-2 text-sm font-medium text-slate-600">
+        <a href="index.html" class="inline-flex items-center min-h-12 px-3.5 py-3 rounded-lg hover:text-nx-navy hover:bg-slate-100 transition">Landing Page</a>
+        <a href="blog.html" class="inline-flex items-center min-h-12 px-3.5 py-3 rounded-lg hover:text-nx-navy hover:bg-slate-100 transition">Blog</a>
+        <a href="cv.html" class="inline-flex items-center min-h-12 px-3.5 py-3 rounded-lg text-nx-navy font-semibold bg-slate-100">CV</a>
       </div>
     </div>
   </nav>
@@ -238,7 +217,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="bg-[#10182c] text-white/70 mt-12">
     <div class="max-w-5xl mx-auto px-6 py-8 text-center text-sm">
-      <p>&copy; 2026 Ahmad Fauzan Ramadhan. CV dibuat dengan Tailwind CSS 4 untuk keperluan praktikum PABWE — Studi Kasus 3.</p>
+      <p>&copy; 2026 Ahmad Fauzan Ramadhan. CV dibuat dengan Tailwind CSS 4 untuk keperluan praktikum PABWE — Praktikum 2.</p>
     </div>
   </footer>
 
